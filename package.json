@@ -1,28 +1,27 @@
 {
-  "_from": "nodebb-plugin-qtdream-homepage@2.3.2",
-  "_id": "nodebb-plugin-qtdream-homepage@2.3.2",
+  "_from": "nodebb-plugin-qtdream-homepage@^2.3.4",
+  "_id": "nodebb-plugin-qtdream-homepage@2.3.4",
   "_inBundle": false,
-  "_integrity": "sha512-4hpDnZCy5ZKrskw3zf4hwdm6C2UY8lCQ2EggYZ/ejValc0Wgk3XaI6MuywsVnApI8IAmcuxVeUE27PY7gW0fUA==",
+  "_integrity": "sha512-ryB5BGLydNqMMjWKW89mVs9FteePJMdzURSKGYJeHfzP2tXjdYqr41kKskDbpmjUWOMBCPa+MzzZ9SVs+vE0/w==",
   "_location": "/nodebb-plugin-qtdream-homepage",
   "_phantomChildren": {},
   "_requested": {
-    "type": "version",
+    "type": "range",
     "registry": true,
-    "raw": "nodebb-plugin-qtdream-homepage@2.3.2",
+    "raw": "nodebb-plugin-qtdream-homepage@^2.3.4",
     "name": "nodebb-plugin-qtdream-homepage",
     "escapedName": "nodebb-plugin-qtdream-homepage",
-    "rawSpec": "2.3.2",
+    "rawSpec": "^2.3.4",
     "saveSpec": null,
-    "fetchSpec": "2.3.2"
+    "fetchSpec": "^2.3.4"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/nodebb-plugin-qtdream-homepage/-/nodebb-plugin-qtdream-homepage-2.3.2.tgz",
-  "_shasum": "9a566135e8033529c6229a2cc0ad42e0cc04e5c9",
-  "_spec": "nodebb-plugin-qtdream-homepage@2.3.2",
-  "_where": "/Users/jiangcaiyang/WebProject/QtDream",
+  "_resolved": "https://registry.npmjs.org/nodebb-plugin-qtdream-homepage/-/nodebb-plugin-qtdream-homepage-2.3.4.tgz",
+  "_shasum": "6c11aa4ae2da3cc3e24e6c99c7cf23f563ab9300",
+  "_spec": "nodebb-plugin-qtdream-homepage@^2.3.4",
+  "_where": "D:\\git\\nodebb",
   "author": {
     "name": "jiangcaiyang",
     "email": "jiangcaiyang12345@126.com"
@@ -63,5 +62,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "2.3.2"
+  "version": "2.3.4"
 }

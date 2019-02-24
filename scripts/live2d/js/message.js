@@ -8,16 +8,16 @@ define( "live2DMessage", [
 		var home_Path = document.location.protocol + '//' + window.document.location.hostname + '/';
 		var message_Path = "/plugins/nodebb-plugin-qtdream-homepage/live2d_scripts/";
 		var userAgent = window.navigator.userAgent.toLowerCase();
-		var norunAI = [];//["android", "iphone", "ipod", "ipad", "windows phone", "mqqbrowser", "msie", "trident/7.0"];
+		var norunAI = ["android", "iphone", "ipod", "ipad", "windows phone", "mqqbrowser", "msie", "trident/7.0"];
 		var norunFlag = false;
 
 
-		// for (var i = 0; i < norunAI.length; i++) {
-		// 	if (userAgent.indexOf(norunAI[i]) > -1) {
-		// 		norunFlag = true;
-		// 		break;
-		// 	}
-		// }
+		for (var i = 0; i < norunAI.length; i++) {
+			if (userAgent.indexOf(norunAI[i]) > -1) {
+				norunFlag = true;
+				break;
+			}
+		}
 
 		if (!window.WebGLRenderingContext) {
 			norunFlag = true;
@@ -26,7 +26,7 @@ define( "live2DMessage", [
 		if (!norunFlag) {
 			var hitFlag = false;
 			var AIFadeFlag = false;
-			var liveTlakTimer = null;
+			var liveTalkTimer = null;
 			var sleepTimer_ = null;
 			var AITalkFlag = false;
 			var talkNum = 0;
@@ -76,13 +76,13 @@ define( "live2DMessage", [
 									text = text.renderTip({text: $(this).text()});
 									showMessage(text, 3000);
 									talkValTimer();
-									clearInterval(liveTlakTimer);
-									liveTlakTimer = null;
+									clearInterval(liveTalkTimer);
+									liveTalkTimer = null;
 								});
 								$(tips.selector).mouseout(function () {
 									showHitokoto();
-									if (liveTlakTimer == null) {
-										liveTlakTimer = window.setInterval(function () {
+									if (liveTalkTimer == null) {
+										liveTalkTimer = window.setInterval(function () {
 											showHitokoto();
 										}, 15000);
 									}
@@ -103,14 +103,13 @@ define( "live2DMessage", [
 									text = text.renderTip({text: $(this).text()});
 									showMessage(text, 3000);
 								});
-								clearInterval(liveTlakTimer);
-								liveTlakTimer = null;
-								if (liveTlakTimer == null) {
-									liveTlakTimer = window.setInterval(function () {
+								clearInterval(liveTalkTimer);
+								liveTalkTimer = null;
+								if (liveTalkTimer == null) {
+									liveTalkTimer = window.setInterval(function () {
 										showHitokoto();
 									}, 15000);
-								}
-								;
+								};
 							});
 						}
 					});
@@ -160,7 +159,7 @@ define( "live2DMessage", [
 				showMessage(text, 12000);
 			})();
 
-			liveTlakTimer = setInterval(function () {
+			liveTalkTimer = setInterval(function () {
 				showHitokoto();
 			}, 15000);
 
@@ -199,7 +198,7 @@ define( "live2DMessage", [
 				$('.message').stop();
 				$('.message').html(text);
 				$('.message').fadeTo(200, 1);
-				//if (timeout === null) timeout = 5000;
+				//if (timeout === null) timeout = 6000;
 				//hideMessage(timeout);
 			}
 
@@ -209,7 +208,7 @@ define( "live2DMessage", [
 
 			function hideMessage(timeout) {
 				//$('.message').stop().css('opacity',1);
-				if (timeout === null) timeout = 5000;
+				if (timeout === null) timeout = 6000;
 				$('.message').delay(timeout).fadeTo(200, 0);
 			}
 
@@ -462,7 +461,10 @@ define( "live2DMessage", [
 
 		live2DMessage.onLoad = function () {
 			var AIimgSrc = [
-				message_Path + "model/rem/remu2048/texture_00.png"
+				message_Path + "model/histoire/histoire.1024/texture_00.png",
+        message_Path + "model/histoire/histoire.1024/texture_01.png",
+        message_Path + "model/histoire/histoire.1024/texture_02.png",
+        message_Path + "model/histoire/histoire.1024/texture_03.png"
 			]
 			var images = [];
 			var imgLength = AIimgSrc.length;
@@ -484,7 +486,7 @@ define( "live2DMessage", [
 							}, 1300);
 						}
 						setTimeout(function () {
-							loadlive2d("live2d", message_Path + "model/rem/rem.json");
+							loadlive2d("live2d", message_Path + "model/histoire/model.json");
 						}, 1000);
 						initLive2d();
 						images = null;

@@ -6,10 +6,10 @@
 	var async = module.parent.require( 'async' );
 	var fs = require( 'fs' );
 	var path = require( 'path' );
-	var categories = module.parent.require( './categories' );
-	var topics = module.parent.require( './topics' );
-	var db = module.parent.require( './database' );
-	var helpers = module.parent.require('./routes/helpers');
+	var categories = require.main.require( './src/categories' );
+	var topics = require.main.require( './src/topics' );
+	var db = require.main.require( './src/database' );
+	var helpers = require.main.require('./src/routes/helpers');
 	var app;
 	var Plugin = { "templates": { } };
 

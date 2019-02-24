@@ -461,10 +461,11 @@ define( "live2DMessage", [
 
 		live2DMessage.onLoad = function () {
 			var AIimgSrc = [
-				message_Path + "model/histoire/histoire.1024/texture_00.png",
-        message_Path + "model/histoire/histoire.1024/texture_01.png",
-        message_Path + "model/histoire/histoire.1024/texture_02.png",
-        message_Path + "model/histoire/histoire.1024/texture_03.png"
+				message_Path + "model/shizuku/shizuku.1024/texture_00.png",
+        message_Path + "model/shizuku/shizuku.1024/texture_01.png",
+        message_Path + "model/shizuku/shizuku.1024/texture_02.png",
+        message_Path + "model/shizuku/shizuku.1024/texture_03.png",
+        message_Path + "model/shizuku/shizuku.1024/texture_04.png"
 			]
 			var images = [];
 			var imgLength = AIimgSrc.length;
@@ -486,7 +487,7 @@ define( "live2DMessage", [
 							}, 1300);
 						}
 						setTimeout(function () {
-							loadlive2d("live2d", message_Path + "model/histoire/model.json");
+							loadlive2d("live2d", message_Path + "model/shizuku/shizuku.model.json");
 						}, 1000);
 						initLive2d();
 						images = null;
